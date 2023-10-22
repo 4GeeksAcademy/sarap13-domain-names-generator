@@ -3,27 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-      crossorigin="anonymous"
-    />
-    <link rel="shortcut icon" href="./4geeks.ico" />
+    <title>Domain Names Generator</title>
   </head>
-  <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+
+  <body style="background-color:  #DAF7A6 ;">
+    <div class="container">
+      <div class="container-fluid d-block align-items-center mt-5">
+        <div class="container justify-content-center">
+          <h1 class="col text-center mb-5 fw-bold" style="color:  #900C3F;">
+            Here you have some domain names for your website:
+          </h1>
+        </div>
+
+        <ul
+          class="row text-center p-3 list-unstyled lh-lg text-white"
+          style="background-color:  #581845 ;"
+          id="domainNames"
+        >
+          <li class=""></li>
+        </ul>
       </div>
     </div>
+
+    <script src="/src/app.js"></script>
   </body>
 </html>

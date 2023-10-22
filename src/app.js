@@ -2,10 +2,32 @@
 import "bootstrap";
 import "./style.css";
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+let pronoun = ["the", "our"];
+let adj = ["great", "big"];
+let noun = ["jogger", "racoon"];
+let domainNameList = document.querySelector("#domainNames");
+
+function domainNameGenerator() {
+  let domainNames = [];
+
+  for (let randomPronoun of pronoun) {
+    for (let randomAdj of adj) {
+      for (let randomNoun of noun) {
+        let allCombinationofDomainNames = `${randomPronoun}${randomAdj}${randomNoun}.com`;
+        domainNames.push(allCombinationofDomainNames);
+      }
+    }
+  }
+  return domainNames;
+}
 
 window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
+  let domainNames = domainNameGenerator();
+  domainNameList.innerHTML = "";
+  for (let allCombinationofDomainNames of domainNames) {
+    let listItemDomainName = document.createElement("li");
+    listItemDomainName.textContent = allCombinationofDomainNames;
+    // listItemDomainName.style.color = "#FF5733";
+    domainNameList.appendChild(listItemDomainName); // Agregar el elemento a la lista
+  }
 };
